@@ -1,0 +1,17 @@
+#to run python scripts on terminal you need to load these modules
+module load numpy/1.10.1-foss-2016uofa-Python-2.7.11
+module load matplotlib/1.5.1-intel-2015c-Python-2.7.11
+
+
+#Run the python script provided by Graham
+#Setting only the H3 parameter
+./plot_d_statistics_angsd2.py  -3 Vanuatu_11740 -o Vanuatu_test.pdf ~/MelGal5_abbababa_stats.txt
+
+#Narrowing down the candidate of interest, concatenate D-stat of independent combinations into one single graph
+./plot_d_statistics_angsd2.py  -1 A15100_GL -1 A16282_GS -2 Palawan_237 -2 Marquesas_9034  -3 A15091_GV -o Mar_GLGS.pdf ~/MelGal5_abbababa_stats.txt
+
+./plot_d_statistics_angsd2.py  -1 Fiji_11700 -1 Marquesas_9034 -1 Ifugao_132 -1 Vanuatu_11740 -2 Fiji_11700 -2 Marquesas_9034 -2 Ifugao_132 -2 Vanuatu_11740  -3 Palawan_237  -o Turkey_out.pdf ~/MelGal5_abbababa_stats.txt
+
+#Repeating the same analysis with Gallus varius as the outgroup
+./plot_d_statistics_angsd2_GV.py  -3 Palawan_237  -o PalGV_out.pdf ~/MelGal5_GV_Out_abbababa_stats.txt
+

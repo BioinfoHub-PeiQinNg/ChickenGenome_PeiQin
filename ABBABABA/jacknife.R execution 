@@ -1,0 +1,11 @@
+#This text note is about R execution on terminal
+#load the module R
+module load R/3.3.0-foss-2016uofa
+
+#To run jacKnife.R on terminal
+#jacknife.R can be downloaded from ANGSD github
+/apps/software/R/3.3.0-foss-2016uofa/bin/Rscript jacknife.R file=~/Chicken_Output/ANGSD_Out/MelGal5_abba.abbababa indNames=Melgal5_list.txt outfile=MelGal5_abbababa_jacknife
+
+#This is for the GV as outgroup execution
+#GV is removed from the bamlist as it serves as the outgroup this time (hence this is a 7 item list)
+/apps/software/R/3.3.0-foss-2016uofa/bin/Rscript jacknife.R file=~/Chicken_Output/ANGSD_Out/MelGal5_GV_Out_abba.abbababa indNames=MelGal5_jack_list.txt outfile=MelGal5_GV_Out_abbababa_jacknife
