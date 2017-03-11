@@ -1,0 +1,30 @@
+#RAxML command to construct maximum likelihood tree
+./raxml -T 2 -p 25469 -m ASC_GTRGAMMA -n filter_minMinor1_Melgal5_raxml_testR1 -s /Users/SabrinaNg/Desktop/RAxML_Out/filter_minMinor1_Melgal5_haplo_transpose2_renamed.txt 
+
+
+#RAxML command to construct best likelihhood (BLK) tree with bootstrapping 
+./raxml -T 2 -x 12345  -p 25469 -f d -s /Users/SabrinaNg/Desktop/RAxML_Out/filter_minMinor1_Melgal5_haplo_transpose2_renamed.txt -m ASC_GTRGAMMA -n MultipleBootstrap2_R1 -# 100 
+
+#Generating boostrapped-labelled tree
+
+./raxml -T 2 -p 25869 -f b -t RAxML_result.filter_minMinor1_Melgal5_raxml_testR1 -z RAxML_bootstrap.MultipleBootstrap2_R1 -m ASC_GTRGAMMA -n filter_minMinor1_Melgal5_raxml_BS_TREE2_R1 
+
+#RAxML command to construct consensus ML phylogenetic tree
+./raxml -T 2 -p 24586 -m ASC_GTRGAMMA -z RAxML_bootstrap.MultipleBootstrap2_R1 -s /Users/SabrinaNg/Desktop/RAxML_Out/filter_minMinor1_Melgal5_haplo_transpose2_renamed.txt -n filter_minMinor1_Melgal5_raxml_ConsTreetest2R1
+
+#Generating Pairwise topological Robinson_Folds distances (output is in text file format according to RAxML manual)					
+./raxml -T 2 -z RAxML_bootstrap.minMinor1_MultipleBootstrap2 -f r -m ASC_GTRGAMMA -n filter_minMinor1_Melgal5_raxml_RF2
+
+
+#-f r: option to compute pairwise topological Robinson-Folds distances* between the ML trees 
+#-f b: generate a tree with bootstrap value
+#- p : any random seed number to help the program eliminate bug when running the program
+#-m : substitution model; plan to experiment with DNA model ASC_GTRGAMMA since it is either one or another (GTRCAT can be used if greater than 50 taxa)
+# -b : boostrapping; insert any random number; # means multile bootstrapping (-#10)
+#-f d:new rapid hillclimbing, default RAxML tree search algorithm (faster)
+#-#: number of bootstrap
+
+./raxml -T 2 -p 24586 -s /Users/SabrinaNg/Desktop/RAxML_Out/filter_minMinor1_Melgal5_haplo_transpose2_renamed.txt -n TESTR1 -m ASC_GTRGAMMA - -asc-corr=stamatakis -q part.txt
+
+
+./raxml -T 2 -p 24586 -s /Users/SabrinaNg/Desktop/RAxML_Out/filter_minMinor2_Melgal5_haplo_transpose2_renamed.txt -n TEST2R2 -m ASC_GTRGAMMA - -asc-corr=stamatakis -q part.txt
