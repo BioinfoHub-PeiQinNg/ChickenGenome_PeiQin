@@ -1,0 +1,8 @@
+/data/biohub/161206_chickenGenomes_rick/Melgal5_mem/Gallus_gallus/A15100_GL.Melgal5_noUnplaced.realigned.bam
+/data/biohub/161206_chickenGenomes_rick/Melgal5_mem/Gallus_gallus/A16282_GS.Melgal5_noUnplaced.realigned.bam
+/data/biohub/161206_chickenGenomes_rick/Melgal5_mem/Gallus_gallus/Fiji_11700.Melgal5_noUnplaced.realigned.bam
+/data/biohub/161206_chickenGenomes_rick/Melgal5_mem/Gallus_gallus/Ifugao_132.Melgal5_noUnplaced.realigned.bam
+/data/biohub/161206_chickenGenomes_rick/Melgal5_mem/Gallus_gallus/Marquesas_9034.Melgal5_noUnplaced.realigned.bam
+/data/biohub/161206_chickenGenomes_rick/Melgal5_mem/Gallus_gallus/Palawan_237.Melgal5_noUnplaced.realigned.bam
+/data/biohub/161206_chickenGenomes_rick/Melgal5_mem/Gallus_gallus/Vanuatu_11740.Melgal5_noUnplaced.realigned.bam
+/data/biohub/161206_chickenGenomes_rick/Melgal5_mem/Gallus_gallus/A15091_GV.Melgal5_noUnplaced.realigned.bam
