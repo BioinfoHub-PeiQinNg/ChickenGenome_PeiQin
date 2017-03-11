@@ -1,0 +1,25 @@
+ #compiling countInvariant.cpp on Phoenix
+ #countInvariant.cpp is a c++ script written by Dr. Hien To
+ g++ -o countInvariant countInvariant.cpp
+
+ #Submitting as a job on phoenix
+ emacs runCountInvariant.sh
+ #!/bin/bash
+#SBATCH -p batch                                         # partition (this is th
+e queue your job will be added to)
+#SBATCH -N 1                                             # number of nodes
+#SBATCH -n 16                                           
+#SBATCH --time=2:00:00                                   # time allocation
+#SBATCH --mem=32GB                     # memory
+#SBATCH -o /home/a1674548/slurm/slurm_%j.out            
+#SBATCH -e /home/a1674548/slurm/slurm_%j.err
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=peiqin.ng@student.adelaide.edu.au
+#Use ANGSD to do SNP and haploid calling
+#Genotype likelihoods (later)
+#Load ANGSD onto Phoenix
+./countInvariant /home/a1674548/Chicken_Output/ANGSD_Out/Unfiltered_Melgal5_matr
+ix.tsv
+
+#then submit it as a usual batch job on Phoenix
