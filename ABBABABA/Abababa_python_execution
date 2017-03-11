@@ -1,0 +1,33 @@
+#to run python scripts on terminal you need to load these modules
+module load numpy/1.10.1-foss-2016uofa-Python-2.7.11
+module load matplotlib/1.5.1-intel-2015c-Python-2.7.11
+
+
+#Run the python script provided by Graham
+#Setting only the H3 parameter
+./plot_d_statistics_angsd2.py  -3 Vanuatu_11740 -o Vanuatu_test.pdf ~/MelGal5_abbababa_stats.txt
+
+#Narrowing down the candidate of interest, concatenate D-stat of independent combinations into one single graph
+./plot_d_statistics_angsd2.py  -1 A15100_GL -1 A16282_GS -2 Palawan_237 -2 Marquesas_9034  -3 A15091_GV -o Mar_GLGS.pdf ~/MelGal5_abbababa_stats.txt
+
+./plot_d_statistics_angsd2.py  -1 Fiji_11700 -1 Marquesas_9034 -1 Ifugao_132 -1 Vanuatu_11740 -2 Fiji_11700 -2 Marquesas_9034 -2 Ifugao_132 -2 Vanuatu_11740  -3 Palawan_237  -o Turkey_out.pdf ~/MelGal5_abbababa_stats.txt
+
+
+
+#Generating the full D-stat test with Turkey and Gallus varius as the reference respectively
+#Turkey as P4
+./plot_d_statistics_angsd2.py  -o Full_Turkey.pdf ~/MelGal5_abbababa_stats.txt
+
+#Gallus varius as P4
+#Repeating the same analysis with Gallus varius as the outgroup
+./plot_d_statistics_angsd2_GV.py  -3 Palawan_237  -o PalGV_out_rename.pdf ~/MelGal5_GV_Out_abbababa_rename.txt
+
+./plot_d_statistics_angsd2_GV.py  -1 Fiji_11700 -1 Marquesas_9034 -1 Ifugao_132 -1 Vanuatu_11740 -2 Fiji_11700 -2 Marquesas_9034 -2 Ifugao_132 -2 Vanuatu_11740  -3 Palawan_237 -o FMV_GV_renameout.pdf ~/MelGal5_GV_Out_abbababa_rename.txt
+
+#Generating extra files as what Graham has demonstrated
+./plot_d_statistics_angsd2_GV.py -1 G.sonneratti -1 G.lafayette -2 G.sonneratti -2 G.lafayette -o a_rename.pdf ~/MelGal5_GV_Out_abbababa_rename.txt   
+
+./plot_d_statistics_angsd2_GV.py  -1 Ifugao -1 Fiji -1 Marq -1 Palawan -1 Vanuatu -2 Ifugao -2 Fiji -2 Marq -2 Palawan -2 Vanuatu  -3 G.sonneratti -o b_rename.pdf ~/MelGal5_GV_Out_abbababa_rename.txt   
+
+
+  
