@@ -3,7 +3,8 @@ This git repo consist of analysis scripts and input data for Chicken Genome Proj
 
 The directories are:
 -	ANGSD_galGal5: contains scripts for ANGSD analysis on galGal5 data
--	ANGSD_MelGal5: contains scripts for ANGSD analysis on MelGal5 data
+-	ANGSD_MelGal5: contains scripts for ANGSD analysis on MelGal5 data, File_format_conversion: script that executes python script that\
+	converts from Phylip format to multi-fasta
 -	PAUP: nexus format input for PAUP analysis on local machine interactive interface of PA\
 	UP software
 -	Phylip: consist of R scripts that runs the transposition (Transposition_Scripts); Input\
@@ -15,4 +16,4 @@ The directories are:
 	sus tree. Model implied on the analysis: ASC_GTRGAMMA
 -	ngsPopGen: Consist of scripts to generate the binary input file for ngsCovar function and the script to 	run ngsCovar for PCA analysis
 -	ABBABABA: consist of text document on jackKnife.R and Graham's python script execution; Turkey_Outgroup 	for scripts used to generate Turkey(outgroup)-based ABBABABA analysis, and Gallus varius_outgroup for GV	(outgroup)-based ABBABABA analysis
-
+-   Saguaro: Bash scripts to execute Saguaro
