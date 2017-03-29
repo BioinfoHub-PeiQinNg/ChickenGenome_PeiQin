@@ -1,0 +1,16 @@
+#format conversion from multi-fasta to the Saguaro binary format
+
+module load SaguaroGW/20150315-foss-2016uofa
+ ./Fasta2HMMFeature -i /fast/users/a1674548/filter_minMinor1_Melgal5_haplo_transpose2_renamed.fas -o /fast/users/a1674548/Saguaro/filter_minMinor1_Melgal5_haplo_saguaro.feature
+
+#cat filter_minMinor1_Melgal5_haplo_transpose2_renamed.fas | head -n 3
+#to create test data
+#sed -n -e 1,2p filter_minMinor1_Melgal5_haplo_transpose2_renamed.fas > test_data.fas
+
+
+ ./Saguaro -f /fast/users/a1674548/Saguaro/filter_minMinor1_Melgal5_haplo_saguaro.feature -o /fast/users/a1674548/Saguaro/filter_minMinor1_Melgal5_haplo_saguaro_outfile
+
+#using all default variable of '-cycle', '-iter' and '-t'
+#-cycle<int> : iterations per cycle (def=2)
+#-iter<int> : iterations with split (def=40)
+#-t<double> : transition penalty (def=150)
